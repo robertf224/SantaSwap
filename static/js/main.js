@@ -55,7 +55,7 @@ function submit() {
 	$('#screen2').fadeOut('fast', function() {
 		$('#busy').fadeIn('fast', function() {
 			$.ajax({
-				url: '/SantaSwap/',
+				url: '/',
 				type: 'POST',
 				data: JSON.stringify(requestData),
 				contentType: 'application/json; charset=utf-8',
