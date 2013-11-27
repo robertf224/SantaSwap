@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Santa Swap</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/pure-min.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        
+
+        <!-- //////////////// Content ///////////////////// -->
+        <div id="header">
+            <h1>Santa Swap</h1>
+        </div>
+
+        <div id="content">
+            <div id="screen1">
+                <p style="text-align: center">Optional Info</p>
+                <form class="pure-form pure-form-stacked">
+                    <fieldset>
+                        <input type="text" name="group-name" class="box" placeholder="Group Name">
+                        <input name="date" class="box" type="date" placeholder="Date">
+                        <input type="number" name="limit" class="box" type="money" placeholder="$ Limit">
+                        <button type="button" style="margin: 20px auto; width: 215px; display: block; height: 55px;" class="pure-button pure-button-green" onclick="next()">Next</button>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div id="screen2">
+
+                <div id="person-list">
+                    <div class="person">  
+                        <div class="pure-g">
+                            <div class="pure-u-3-4">
+                                <form class="pure-form pure-form-stacked">
+                                    <fieldset>
+                                        <input type="text" name="name" class="person-box" placeholder="Name">
+                                        <input type="tel" name="number" class="person-box" placeholder="Phone Number">
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="pure-u-1-4">
+                                <button class="pure-button pure-button-red person-button" onclick="removePerson(this.parentNode.parentNode.parentNode)">-</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="person">  
+                        <div class="pure-g">
+                            <div class="pure-u-3-4">
+                                <form class="pure-form pure-form-stacked">
+                                    <fieldset>
+                                        <input type="text" name="name" class="person-box" placeholder="Name">
+                                        <input type="tel" name="number" class="person-box" placeholder="Phone Number">
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="pure-u-1-4">
+                                <button class="pure-button pure-button-red person-button" onclick="removePerson(this.parentNode.parentNode.parentNode)">-</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="person">  
+                        <div class="pure-g">
+                            <div class="pure-u-3-4">
+                                <form class="pure-form pure-form-stacked">
+                                    <fieldset>
+                                        <input type="text" name="name" class="person-box" placeholder="Name">
+                                        <input type="tel" name="number" class="person-box" placeholder="Phone Number">
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="pure-u-1-4">
+                                <button class="pure-button pure-button-red person-button" onclick="removePerson(this.parentNode.parentNode.parentNode)">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" style="margin: 0px auto; width: 100%; height: 40px;" class="pure-button" onclick="addPerson()">+</button>
+
+                <div style="margin: 40px auto 20px; text-align:center;">
+                    <button type="button" style="width: 148px; height: 55px;" class="pure-button pure-button-orange" onclick="back()">Back</button>
+                    <button type="button" style="width: 148px; height:55px;" class="pure-button pure-button-green" onclick="submit()">Submit</button>  
+                </div>
+
+            </div>
+            <div id="busy">
+                <img src="img/busy.gif" width="100px" height="100px">
+            </div>
+            <div id="screen3">
+                <p style="text-align: center"> The details have been sent out to all parties involved! Have a great gift exchange! </p>
+            </div>
+        </div>
+
+        <div id="footer">
+            <h3>By <a style="text-decoration: none; color: #2b4a98;" href="http://fidler.io">Robert Fidler</a></h3>
+        </div>
+        <!-- /////////////////////////////////////////////// -->
+        <div id="person-base" style="display:none">  
+            <div class="pure-g">
+                <div class="pure-u-3-4">
+                    <form class="pure-form pure-form-stacked">
+                        <fieldset>
+                            <input type="text" name="name" class="person-box" placeholder="Name">
+                            <input type="tel" name="number" class="person-box" placeholder="Phone Number">
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="pure-u-1-4">
+                    <button class="pure-button pure-button-red person-button" onclick="removePerson(this.parentNode.parentNode.parentNode)">-</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!--<script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>-->
+    </body>
+</html>
