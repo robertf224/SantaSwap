@@ -82,11 +82,6 @@ def send_sms(person):
 	client.sms.messages.create(to=person['number'], from_='your twilio number', body=body)
 
 
-@app.errorhandler(400)
-def error(error):
-    return 'error', 400
-
-
 
 if __name__ == '__main__':
 	app.run()
