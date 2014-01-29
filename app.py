@@ -75,7 +75,7 @@ def send_emails(people):
 		text = pystache.render(message_template, person)
 		subject = 'Secret Santa'
 		if person['group-name']:
-			subject +=  'with ' + person['group-name']
+			subject +=  ' with ' + person['group-name']
 		message = 'Subject: %s\n\n%s' % (subject, text)
 		server.sendmail(username+'@gmail.com', person['email'], message)
 		server.ehlo()
