@@ -39,8 +39,8 @@ function submit() {
 	var people = [];
 	var personForms = $('.person form');
 	for(var i = 0; i < personForms.length; i++) {
-		if (phoneNumber(personForms[i].number.value)) {
-			people.push({'name': personForms[i].name.value, 'number': personForms[i].number.value});
+		if(personForms[i].name.value.length > 0 && personForms[i].email.value.length > 0) {
+			people.push({'name': personForms[i].name.value, 'email': personForms[i].email.value});
 		}
 	}
 
@@ -78,9 +78,4 @@ function submit() {
 
 
 }
-
-function phoneNumber(input)  {  
-	input = input.replace(/-/g, "");
-	return !isNaN(input) && input.length == 10;
-}  
 
