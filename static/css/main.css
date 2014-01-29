@@ -148,7 +148,7 @@ fieldset {
 .person-box {
     display: block !important; 
     margin: 2px 0px !important; 
-    width: 215px;
+    width: 160px; /* 215 old */
     text-align:center;
     height: 35px;
 }
