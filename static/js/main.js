@@ -22,7 +22,7 @@ function addPerson() {
 	person.id = null;
 	person.className = "person";
 	personList.appendChild(person);
-	$(person).slideDown('fast');
+	$(person).show();
 }
 
 function back() {
