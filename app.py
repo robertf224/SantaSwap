@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify, abort, make_response
-from twilio.rest import TwilioRestClient
 import smtplib
 import random, datetime, threading
 import pystache
