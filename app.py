@@ -17,8 +17,6 @@ def index():
 @app.route('/', methods=['POST'])
 def post():
 
-	print request.json
-
 	if not request.json:
 		return 'request must be json', 400
 
