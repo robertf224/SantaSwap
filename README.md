@@ -6,7 +6,7 @@ A web application to quickly create secret santa exchanges.
 Description
 -----------
 
-The application is written in python using the Flask framework, and can be found live [here](http://fidler.io/SantaSwap/).  Note: this will only work with verified numbers if deployed with a Twilio trial account.  Also, if deployed with a full account, it would make sense to do rate-limiting.
+The application is written in python using the Flask framework, and can be found live [here](http://fidler.io/SantaSwap/).
 
 Changes
 -------
