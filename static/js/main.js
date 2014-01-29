@@ -5,7 +5,6 @@ basePersonDiv.parentNode.removeChild(basePersonDiv);
 var personList = document.getElementById("person-list");
 
 function next() {
-
 	$('#screen1').fadeOut('fast', function() {
 		$('#screen2').fadeIn('fast');
 	});
@@ -22,7 +21,7 @@ function addPerson() {
 	person.id = null;
 	person.className = "person";
 	personList.appendChild(person);
-	$(person).show();
+	$(person).slideDown('fast');
 }
 
 function back() {
